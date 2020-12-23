@@ -15,10 +15,11 @@ export class Satellite {
     }
     
 
-    shouldShowWarning() {
-        if (Satellite[1] === 'Space Debris') {
+    shouldShowWarning():boolean {
+        if (this.type === 'Space Debris'.toUpperCase()) {
+
             return true;
-        } else if (Satellite[1] !=='Space Debris') {
+        } else if (this.type !=='Space Debris'.toUpperCase()) {
             return false;
         }
     }

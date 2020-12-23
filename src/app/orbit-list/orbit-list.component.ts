@@ -6,16 +6,25 @@ import { Satellite } from '../satellite';
   templateUrl: './orbit-list.component.html',
   styleUrls: ['./orbit-list.component.css']
 })
-  
+
 export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
 
-
-  
   constructor() { }
 
-  ngOnInit(): void { }
-  
-  //add function here
+  ngOnInit(): void {
 
-}
+  }
+
+
+  sort(column: string): void {
+    this.satellites.sort(function (a: Satellite, b: Satellite): number {
+      if (a[column] < b[column]) {
+        return -1;
+      } else if (a[column] > b[column]) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+};
