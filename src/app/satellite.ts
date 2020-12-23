@@ -15,13 +15,8 @@ export class Satellite {
     }
     
 
-    shouldShowWarning():boolean {
-        if (this.type === ('Space Debris').toUpperCase()) {
-             
-            return true;
-        } else if (this.type !==('Space Debris').toUpperCase()) {
-            return false;
-        }
+    shouldShowWarning(): boolean {
+        return this.type === "Space Debris"; 
     }
 
 
