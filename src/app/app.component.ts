@@ -43,10 +43,10 @@ export class AppComponent {
       }
     }
     this.displayList = matchingSatellites;
-  }
-
   };
-  
+
+};
+
 
         // TODO: loop over satellites
         // TODO: create a Satellite object using new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
